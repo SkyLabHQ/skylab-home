@@ -341,4 +341,4 @@ export const LIST_ITEM_VARIANTS: Variants = {
     },
 };
 
-export const bttHomeUrl = "https://app.projmercury.io";
+export const bttHomeUrl = "https://www.bidtactoe.io";

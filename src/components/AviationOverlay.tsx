@@ -23,7 +23,6 @@ import ColorfulOverlay2 from "../assets/aviation-overlay-colorful-vector-2.svg";
 import mintTimeline from "../assets/mint-timeline.svg";
 import useActiveWeb3React from "../hooks/useActiveWeb3React";
 import { AviationConfig } from "../pages/Mint";
-import ConnectWallet from "./ConnectWallet";
 import { useNavigate } from "react-router-dom";
 import { bttHomeUrl } from "@/skyConstants";
 
@@ -50,14 +49,6 @@ const Overlay = styled(Box)`
 const CloseButton = styled(Box)`
     width: 32px;
     height: 32px;
-`;
-
-const ConnectWalletWrapper = styled(Text)`
-    font-size: 32px;
-    padding: 0 32px;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    cursor: pointer;
 `;
 
 export const AviationOverlay: FC<AviationOverlayProps> = ({
@@ -355,72 +346,8 @@ export const AviationOverlay: FC<AviationOverlayProps> = ({
                                 </Flex>
                             </Box>
                         )}
-                        {/* {isNewLayout ? (
-                            <Box
-                                display="flex"
-                                alignItems="center"
-                                marginTop="2vw"
-                                justifyContent="flex-end"
-                            >
-                                <Text fontSize="40px">Price</Text>
-                            </Box>
-                        ) : (
-                            <Fragment>
-                                <Box
-                                    display="flex"
-                                    alignItems="center"
-                                    marginTop="2vw"
-                                >
-                                    <Text fontSize="40px">Floor Price</Text>
-                                </Box>
-                                <Box
-                                    display="flex"
-                                    alignItems="center"
-                                    marginTop="2vw"
-                                >
-                                    <Text fontSize="40px">Aviation Minted</Text>
-                                </Box>
-                            </Fragment>
-                        )} */}
-                        {/* <Box
-                            display="flex"
-                            alignItems="flex-end"
-                            justifyContent="end"
-                            marginTop={isNewLayout ? "4.5vw" : "7.5vw"}
-                            onClick={onOpen}
-                        >
-                            <Image
-                                src={DashedBorder}
-                                width="14vw"
-                                marginBottom="10px"
-                                marginRight="-2px"
-                            />
-                            <ConnectWalletWrapper>
-                                <div>
-                                    {account
-                                        ? isNewLayout
-                                            ? "Mint"
-                                            : "Purchase On"
-                                        : "Connect Wallet"}
-                                </div>
-                            </ConnectWalletWrapper>
-                        </Box>
-                         */}
                     </Box>
                 </Box>
-                <Modal isOpen={isOpen} onClose={onClose}>
-                    <ModalOverlay
-                        backdropFilter="blur(30px)"
-                        bg="rgba(0, 0, 0, 0.2)"
-                    />
-                    <ModalContent
-                        bgColor="rgba(0, 0, 0, 0.5)"
-                        maxWidth="65vw"
-                        top="8vw"
-                    >
-                        <ConnectWallet onModalClose={onClose} />
-                    </ModalContent>
-                </Modal>
             </Overlay>
         </Portal>
     );

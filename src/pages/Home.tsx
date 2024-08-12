@@ -119,10 +119,6 @@ const Home = (): ReactElement => {
             };
             loadBackgroundEvent();
         }, 0);
-
-        setTimeout(() => {
-            setInit(true);
-        }, 10000);
     }, []);
 
     useEffect(() => {

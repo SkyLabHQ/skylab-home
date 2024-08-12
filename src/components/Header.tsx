@@ -20,7 +20,6 @@ import { motion, useAnimation } from "framer-motion";
 import logo from "../assets/logo.svg";
 import knob from "../assets/knob.png";
 import { useKnobVisibility } from "../contexts/KnobVisibilityContext";
-import Web3Status from "./Web3Status";
 import MediaMenu from "./MediaMenu";
 
 const hideHeaderList: string[] = [];
@@ -205,8 +204,6 @@ const Header = (): ReactElement => {
                             <Box>
                                 <MediaMenu />
                             </Box>
-                            <Web3Status />
-                            {/* <UserSettings /> */}
                         </Flex>
                     </Box>
                 </Flex>

@@ -76,7 +76,7 @@ const Navigation = ({
             ref={ref}
             pos="absolute"
             top={{ base: "0vw", md: "7vw", lg: "6vw", xl: "3vw" }}
-            right="-50%"
+            right="-20%"
         >
             <MotionStack variants={LIST_VARIANTS} spacing={3} direction="row">
                 {LOGOS.map(({ logo, url }, index) => (
